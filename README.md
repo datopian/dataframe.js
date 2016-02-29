@@ -26,3 +26,9 @@ Propose a 3-part stack:
 * DataQuery - querying data efficiently, storing and reifying queries.  <-- not sure about this one as needed separately from e.g. DataFrame
 * DataConnector - data import / export 
 
+## Contributing
+
+We are going to use http://jasmine.github.io/ for testing, install it as follows:
+    
+    npm install -g jasmine
+
