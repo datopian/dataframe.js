@@ -1,8 +1,10 @@
 A Javascript-only data library providing functionality like DataFrame in Pandas or R.
 
-Context: we built something like this in Recline with the Dataset object. There's also the work in Miso -- who, Rufus personally thinks did the Dataset object a bit better. But IMO neither Recline or Miso got it quite right. It's time to look at this again for a Recline v2.
+Context: we built something like this in Recline with the Dataset object. There's also the work in Miso -- who I personally thinks did the Dataset object a bit better. But IMO neither Recline or Miso got it quite right. It's time to look at this again for a Recline v2.
 
-Context: Tabular Data Packages. There is also a connection with Tabular Data Packages and JSON Table Schema. In particular, the provision of a Tabular Data Package and JSON Table Schema javascript library. In particular, the tabular data in a Tabular Data Package Resource need to be held in some kind of rich javascript object and this library would be a good vehicle.
+There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp] and associated tooling such as the various Data Package javascript libraries. The tabular data in a Tabular Data Package Resource, when manipulated in javascript will need to be stored in some kind of structured javascript object and this DataFrame could be a good vehicle.
+
+[tdp]: http://data.okfn.org/standards
 
 ## Research
 
@@ -16,13 +18,24 @@ Context: Tabular Data Packages. There is also a connection with Tabular Data Pac
   * http://learnjsdata.com/ - mainly uses d3 data manipulation capabilities
   * https://github.com/agershun/alasql
 
-## A Full Stack Data 
+*Suggestions welcome: please open pull requests or issues*
 
-Propose a 3-part stack:
+## What is the Full Stack for Data 
+
+DataFrame only covers a part of the "data stack":
 
 * DataFrame object for holding "rows" of data
-  * Might add a Dataset (or DataPackage) object as a way to represent an overall Dataset with metadata and possibly multiple DataFrames (plus 
-* DataViews - data presentation (grids, graphs etc). Largely handled by third party libraries.
-* DataQuery - querying data efficiently, storing and reifying queries.  <-- not sure about this one as needed separately from e.g. DataFrame
-* DataConnector - data import / export 
+  * Might add a Dataset (or DataPackage) object as a way to represent an overall Dataset with metadata and possibly multiple DataFrames (plus other info)
+* DataQuery - querying data efficiently, storing and reifying queries.  &laquo; not sure about this one as needed separately from e.g. DataFrame
+* Connectors - data import / export from other sources ranging from CSV to RDBMS and more. Again probably not part of DataFrame but separate libraries. This is a particular area where the connection with Tabular Data Package and JSON Table Schema is strong
+
+There is of course lots of other stuff in the "data stack" such as the following:
+
+* Views / Visualization - data presentation (grids, graphs etc). Largely handled by third party libraries.
+* Validation
+* Analytics
+* ETL
+* etc
+
+These might use DataFrame but they are not specifically in DataFrame.
 
