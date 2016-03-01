@@ -12,11 +12,12 @@ There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp
   * Pandas Data Structures: http://pandas.pydata.org/pandas-docs/stable/dsintro.html
   * Comparison with R: http://pandas.pydata.org/pandas-docs/stable/comparison_with_r.html
   * Some early thoughts on design from 2011: http://wesmckinney.com/blog/a-roadmap-for-rich-scientific-data-structures-in-python/
-* I've looked for people already doing this in JS and can't find a lot
+* R and its lists and data frames: https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Data-frames
+* I've looked for people already doing this in JS and can't find a lot e.g.
   * https://github.com/real-serious-games/data-forge-js
 * https://www.quora.com/Is-there-a-data-handling-library-like-Python-Panda-for-JavaScript
   * http://learnjsdata.com/ - mainly uses d3 data manipulation capabilities
-  * https://github.com/agershun/alasql
+  * https://github.com/agershun/alasql - nice but more an SQL query interface
 
 *Suggestions welcome: please open pull requests or issues*
 
