@@ -1,14 +1,17 @@
 A Javascript-only data library providing functionality like DataFrame in Pandas or R.
 
-Context: we built something like this in Recline with the Dataset object. There's also the work in Miso -- who I personally thinks did the Dataset object a bit better. But IMO neither Recline or Miso got it quite right. It's time to look at this again for a Recline v2.
+Context: I built something like this before with [Recline][] and its [Dataset object][recline-dataset]. There's also the work in [Miso][] -- who I personally think did the Dataset object a bit better. But IMO neither Recline or Miso got it quite right. It's time to look at this again for a Recline v2.
 
 There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp] and associated tooling such as the various Data Package javascript libraries. The tabular data in a Tabular Data Package Resource, when manipulated in javascript will need to be stored in some kind of structured javascript object and this DataFrame could be a good vehicle.
 
+[Recline]: http://okfnlabs.org/recline/
+[recline-dataset]: http://okfnlabs.org/recline/docs/models.html
+[Miso]: http://misoproject.com/dataset/
 [tdp]: http://data.okfn.org/standards
 
 ## Research
 
-* Pandas - Pandas is probably the best starting point because it is the most recent and best implementation. In particular, it synthesized the existing work in R, MatLab and made it a bit better and did it in python which has a very nice default coder interface.
+* [Pandas][] - Pandas is probably the best starting point because it is the most recent and best implementation. In particular, it synthesized the existing work in R, MatLab and made it a bit better and did it in python which has a very nice default coder interface.
   * Pandas Data Structures: http://pandas.pydata.org/pandas-docs/stable/dsintro.html
   * Comparison with R: http://pandas.pydata.org/pandas-docs/stable/comparison_with_r.html
   * Some early thoughts on design from 2011: http://wesmckinney.com/blog/a-roadmap-for-rich-scientific-data-structures-in-python/
@@ -18,8 +21,12 @@ There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp
 * https://www.quora.com/Is-there-a-data-handling-library-like-Python-Panda-for-JavaScript
   * http://learnjsdata.com/ - mainly uses d3 data manipulation capabilities
   * https://github.com/agershun/alasql - nice but more an SQL query interface
+* Other javascript libraries (there are quite a few) ...
+  * http://vega.github.io/datalib/ - data library abstracted out of vega. Quite a variety of features ranging from group-by and stats to general JS utilities
 
 *Suggestions welcome: please open pull requests or issues*
+
+[Pandas]: http://pandas.pydata.org/
 
 ## What is the Full Stack for Data 
 
@@ -39,4 +46,8 @@ There is of course lots of other stuff in the "data stack" such as the following
 * etc
 
 These might use DataFrame but they are not specifically in DataFrame.
+
+## Key Features
+
+See https://github.com/rgrp/dataframe.js/issues/3
 
