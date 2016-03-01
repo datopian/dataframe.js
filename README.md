@@ -51,3 +51,9 @@ These might use DataFrame but they are not specifically in DataFrame.
 
 See https://github.com/rgrp/dataframe.js/issues/3
 
+## Contributing
+
+We are going to use http://jasmine.github.io/ for testing, install it as follows:
+    
+    npm install -g jasmine
+
