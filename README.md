@@ -53,7 +53,11 @@ See https://github.com/rgrp/dataframe.js/issues/3
 
 ## Contributing
 
-We are going to use http://jasmine.github.io/ for testing, install it as follows:
+We use mocha for testing, install it as follows:
     
-    npm install -g jasmine
+    npm install -g expect.js
+    npm install -g mocha
 
+Then to run tests:
+    
+    mocha
