@@ -1,8 +1,30 @@
-A Javascript-only data library providing functionality like DataFrame in Pandas or R.
+Javascript-only data library providing functionality like DataFrame in Pandas or R.
 
-Context: I built something like this before with [Recline][] and its [Dataset object][recline-dataset]. There's also the work in [Miso][] -- who I personally think did the Dataset object a bit better. But IMO neither Recline or Miso got it quite right. It's time to look at this again for a Recline v2.
+**This project is at discussion stage - please leave comments and suggestions.**
 
-There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp] and associated tooling such as the various Data Package javascript libraries. The tabular data in a Tabular Data Package Resource, when manipulated in javascript will need to be stored in some kind of structured javascript object and this DataFrame could be a good vehicle.
+## Key Features
+
+See also https://github.com/rgrp/dataframe.js/issues/3
+
+* Access rows and fields within rows quickly and easily using a convenient syntax e.g. `dataset[rowid]`, `dataset[rowid][fieldid]` -- preferably both dictionary and index style access
+* Query data and "freeze" it to a new DataFrame
+* Import data into a DataFrame from common sources and especially Tabular Data Packages ... (if possible do this without re-inventing the wheel by leveraging work elsewhere)
+
+```
+var d = DataFrame(data-source or raw data)
+// first row of data
+d[0]
+// data fields / columns
+d.fields
+
+d.query(querySpec)
+```
+
+## Context
+
+Context: I built something like this before with [Recline][] and its [Dataset object][recline-dataset]. There's also the work in [Miso][] who did a very nice job on the Dataset object. However, neither Recline or Miso got it quite right. It's time to look at this again.
+
+There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp] and associated tooling such as the various Data Package javascript libraries. Manipulating the tabular data from a Tabular Data Package in javascript will need some kind of library and object and a DataFrame library could provide this.
 
 [Recline]: http://okfnlabs.org/recline/
 [recline-dataset]: http://okfnlabs.org/recline/docs/models.html
@@ -46,10 +68,6 @@ There is of course lots of other stuff in the "data stack" such as the following
 * etc
 
 These might use DataFrame but they are not specifically in DataFrame.
-
-## Key Features
-
-See https://github.com/rgrp/dataframe.js/issues/3
 
 ## Contributing
 
