@@ -9,6 +9,7 @@ See also https://github.com/rgrp/dataframe.js/issues/3
 * Access rows and fields within rows quickly and easily using a convenient syntax e.g. `dataset[rowid]`, `dataset[rowid][fieldid]` -- preferably both dictionary and index style access
 * Query data and "freeze" it to a new DataFrame
 * Import data into a DataFrame from common sources and especially Tabular Data Packages ... (if possible do this without re-inventing the wheel by leveraging work elsewhere)
+* Be able to cope with large amounts of data e.g. 100k or 1m row CSV (see [issue #6][iss-6] for discussion)
 
 ```
 var d = DataFrame(data-source or raw data)
@@ -19,6 +20,8 @@ d.fields
 
 d.query(querySpec)
 ```
+
+[iss-6]: https://github.com/rgrp/dataframe.js/issues/6
 
 ## Context
 
@@ -49,6 +52,10 @@ There's also a connection with [Tabular Data Packages and JSON Table Schema][tdp
 *Suggestions welcome: please open pull requests or issues*
 
 [Pandas]: http://pandas.pydata.org/
+
+### Existing Libraries in Javascript
+
+See this issue: https://github.com/rgrp/dataframe.js/issues/5
 
 ## What is the Full Stack for Data 
 
