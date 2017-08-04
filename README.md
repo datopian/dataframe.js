@@ -2,7 +2,7 @@ Javascript-only data library providing functionality like DataFrame in Pandas or
 
 **This project is at discussion stage - please leave comments and suggestions.**
 
-## Key Features
+## Key Features
 
 See also https://github.com/rgrp/dataframe.js/issues/3
 
